@@ -19,7 +19,7 @@ class _FirstScreenState extends State<FirstScreen> {
 
   Future<void> imageSelector() async {
     List<XFile>? images = await imagePicker.pickMultiImage();
-    if (images != null && mounted) {
+    if (mounted) {
       setState(() {
         selectedImages.addAll(images.map((img) => File(img.path)).toList());
       });
